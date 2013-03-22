@@ -19,7 +19,7 @@
                 fontSize:   $this.css('fontSize'),
                 fontFamily: $this.css('fontFamily'),
                 lineHeight: $this.css('lineHeight'),
-				color:		'#fff',
+                color:      '#fff',
                 resize:     'none',
                 zIndex:     '-10'
             }).appendTo(document.body);
@@ -37,11 +37,8 @@
                                     .replace(/\n$/, '<br/>&nbsp;')
                                     .replace(/\n/g, '<br/>')
                                     .replace(/ {2,}/g, function(space) { return times('&nbsp;', space.length -1) + ' ' });
-                
                 shadow.html(val);
-				//console.log(shadow.height());
                 $(this).css('height', Math.max(shadow.height() + 20, minHeight));
-            
             }
             
             $(this).change(update).keyup(update).keydown(update);
